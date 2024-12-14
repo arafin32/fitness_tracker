@@ -30,11 +30,22 @@ $stmt->close();
         .workout-list { margin-top: 20px; }
         .workout-item { background: #fff; padding: 10px; margin: 10px 0; border-radius: 4px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
         .workout-item a { margin-right: 10px; }
+        .logout-link {
+            text-align: right;
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>Welcome to Your Dashboard</h1>
+
+    <!-- Logout Link -->
+    <div class="logout-link">
+        <a href="logout.php">Log Out</a>
+    </div>
+
     <a href="create_workout.php">Create Workout</a>
+
     <div class="workout-list">
         <?php while ($workout = $workouts->fetch_assoc()): ?>
             <div class="workout-item">
